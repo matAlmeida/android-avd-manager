@@ -14,10 +14,13 @@ if (!ANDROID_SDK) {
 }
 
 let emuExePath = '';
+let lineBreaker = '';
 if (isWin) {
   emuExePath = `${ANDROID_SDK}\\emulator\\emulator.exe`;
+  lineBreaker = '\r\n';
 } else {
-  emuExePath = `.\\${ANDROID_SDK}\\emulator\\emulator`;
+  emuExePath = `${ANDROID_SDK}/emulator/emulator`;
+  lineBreaker = '\n';
 }
 const listAvdsCMD = `${emuExePath} -list-avds`;
 exec(listAvdsCMD, (err, stdout) => {
@@ -28,7 +31,7 @@ exec(listAvdsCMD, (err, stdout) => {
     return;
   }
 
-  const avaliablesAVDS = stdout.split('\r\n');
+  const avaliablesAVDS = stdout.split(lineBreaker);
   avaliablesAVDS.pop();
 
   inquirer
