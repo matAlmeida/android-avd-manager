@@ -1,7 +1,7 @@
 {
   "name": "android-avd-manager",
   "version": "1.0.0",
-  "description": "Manage and open your Android Virtual Devices",
+  "description": "Manage and open your Android Virtual Devices without open Android Studio",
   "main": "./src/index.js",
   "homepage": "https://github.com/matalmeida/android-avd-manager#readme",
   "bugs": {
