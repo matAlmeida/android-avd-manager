@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Manage and open your Android Virtual Devices",
   "main": "./src/index.js",
+  "homepage": "https://github.com/matalmeida/android-avd-manager#readme",
+  "bugs": {
+    "url": "https://github.com/matalmeida/android-avd-manager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matalmeida/android-avd-manager.git"
+  },
   "scripts": {
     "lint": "eslint src/**/*.js",
     "start": "node src/index.js"
