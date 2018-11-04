@@ -1,0 +1,26 @@
+{
+  "name": "android-avd-manager",
+  "version": "1.0.0",
+  "description": "Manage and open your Android Virtual Devices",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "avd",
+    "android",
+    "emulator"
+  ],
+  "author": "Matheus Almeida <mat.almeida@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cli-spinner": "0.2.8",
+    "inquirer": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.14.3"
+  }
+}
