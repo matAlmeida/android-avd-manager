@@ -1,8 +1,11 @@
+#!/usr/bin/env node
+
 const { exec } = require('child_process');
 const inquirer = require('inquirer');
 const Spinner = require('cli-spinner').Spinner;
 
 const ANDROID_SDK = process.env.ANDROID_SDK;
+const isWin = process.platform === 'win32';
 
 if (!ANDROID_SDK) {
   console.error(
@@ -10,7 +13,12 @@ if (!ANDROID_SDK) {
   );
 }
 
-const emuExePath = `${ANDROID_SDK}\\emulator\\emulator.exe`;
+let emuExePath = '';
+if (isWin) {
+  emuExePath = `${ANDROID_SDK}\\emulator\\emulator.exe`;
+} else {
+  emuExePath = `.\\${ANDROID_SDK}\\emulator\\emulator`;
+}
 const listAvdsCMD = `${emuExePath} -list-avds`;
 exec(listAvdsCMD, (err, stdout) => {
   if (err) {
