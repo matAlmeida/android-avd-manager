@@ -1,11 +1,11 @@
-export const runOrCreate = {
+const runOrCreate = {
   type: 'list',
   name: 'runOrCreate',
   message: 'Run a existent AVD or Create a new one?',
   choices: ['Run a AVD', 'Create new AVD']
 };
 
-export const creation = {
+const creation = {
   avdName: {
     type: 'input',
     name: 'newAvdName',
@@ -25,7 +25,7 @@ export const creation = {
   }
 };
 
-export const run = {
+const run = {
   avdList: (list) => ({
     type: 'list',
     name: 'avdName',
@@ -39,4 +39,10 @@ export const run = {
     message: 'Are you sure?',
     default: false
   }
+};
+
+module.exports = {
+  runOrCreate,
+  creation,
+  run
 };
