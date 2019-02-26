@@ -1,8 +1,11 @@
-const runOrCreate = {
+const runOrCreateAVD = {
   type: 'list',
   name: 'runOrCreate',
   message: 'Run a existent AVD or Create a new one?',
-  choices: ['Run a AVD', 'Create new AVD']
+  choices: [
+    { name: 'Run a AVD', value: 'run' },
+    { name: 'Create new AVD', value: 'create' }
+  ]
 };
 
 const creation = {
@@ -42,7 +45,7 @@ const run = {
 };
 
 module.exports = {
-  runOrCreate,
+  runOrCreateAVD,
   creation,
   run
 };
